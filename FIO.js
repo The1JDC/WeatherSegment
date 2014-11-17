@@ -83,12 +83,28 @@ console.log(cardinal(courseTo('42.01217622910639','-87.79521497471302','42.01897
         access_token: "7442f33e1b4edd08b8dd1984ad2d21363311bd93"
 	}
  );
+ 
+ // This is the strava API. Returns all starred segments. All the one that are interesting in attempting. 
+ // TODO: We need to match the 2 sets of bearing (within a threshold).
+ // This is assuming that the segments are not too tortutuous 
+ 
+ 
+	strava.segments.starred.get({paginate:false},function(err, res)
+		{
+		
+		console.log(res);
+		}
+	)
+	/*
 	strava.athlete.get(function(err, res) 
 	{
         console.log(res);
     });
+	*/
 	
-/*	
+	
+	// This is the Weather API, returns wind bearing for a specified Zip or lat/long (geocode avail)
+	
     var sensor = false;
     geo.geocoder(geo.google, address, sensor,
     function(formattedAddress, latitude, longitude, details) 
@@ -108,7 +124,7 @@ console.log(cardinal(courseTo('42.01217622910639','-87.79521497471302','42.01897
     });
 
 	
-*/	
+
 	
 	
 
