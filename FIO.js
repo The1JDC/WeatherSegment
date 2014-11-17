@@ -1,6 +1,8 @@
+//TODO: Move resource out of code and in file
+
 var geo = require('geo');
 var ForecastIo = require('forecastio');
-var address = '5817 N. Spaulding Avenue, Chicago IL 60659';
+var address = '5723 N. California Ave, Chicago IL 60659';
 var forecastIo = new ForecastIo('d548460a36a617cfe55c334b989fb74e');
 
 var glat='';
