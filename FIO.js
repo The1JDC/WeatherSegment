@@ -74,6 +74,20 @@ function distanceBetween(lat1, long1, lat2, long2) {
 //42.01217622910639,"start_longitude":-87.79521497471302,"end_latitude":42.01897594296307,"end_longitude":-87.7972450875283
 console.log(cardinal(courseTo('42.01217622910639','-87.79521497471302','42.01897594296307','-87.7972450875283')));
 
+ var strava = new require("strava")
+ (
+	{
+        client_id: "323",   
+        client_secret: "2960d7d11de1179f1c065c4d26c3d21718893ba1",
+        redirect_uri: "https://98.227.104.63",
+        access_token: "7442f33e1b4edd08b8dd1984ad2d21363311bd93"
+	}
+ );
+	strava.athlete.get(function(err, res) 
+	{
+        console.log(res);
+    });
+	
 /*	
     var sensor = false;
     geo.geocoder(geo.google, address, sensor,
