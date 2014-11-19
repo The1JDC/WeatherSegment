@@ -1,5 +1,7 @@
 //TODO: Move resource out of code and in file
 
+
+// TODO: Do addresses by segments etc
 var geo = require('geo');
 var ForecastIo = require('forecastio');
 var address = '5723 N. California Ave, Chicago IL 60659';
@@ -75,6 +77,7 @@ function distanceBetween(lat1, long1, lat2, long2) {
 }
 //42.01217622910639,"start_longitude":-87.79521497471302,"end_latitude":42.01897594296307,"end_longitude":-87.7972450875283
 console.log(cardinal(courseTo('42.01217622910639','-87.79521497471302','42.01897594296307','-87.7972450875283')));
+
 
  var strava = new require("strava")
  (
